@@ -156,9 +156,28 @@ a:hover{text-decoration: none; cursor:pointer;}
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
+.mg-clear{
+	margin:0;
+}
+.mg-sm{
+	margin-top:10px;
+	margin-bottom:5px;
+}
 .mg-md{
 	margin-top:10px;
 	margin-bottom:20px;
+}
+img.mg-sm,img.mg-md,img.mg-lg{
+	margin-top: 0;
+}
+img.mg-sm{
+	margin-bottom:10px;
+}
+img.mg-md{
+	margin-bottom:30px;
+}
+img.mg-lg{
+	margin-bottom:50px;
 }
 
 /* = Buttons
@@ -185,11 +204,21 @@ button{
 
 /* = Icons
 -------------------------------------------------------------- */
-.icon-lg{
-	font-size:60px!important;
+.icon-md{
+	font-size:30px!important;
 }
 
 
+/* = Text & Icon Styles
+-------------------------------------------------------------- */
+.blockquote{
+	padding:0 20px;
+	border-left:2px solid;
+}
+.blockquote.text-right{
+	border-left:0;
+	border-right:2px solid;
+}
 
 
 .card-sq, .card-sq .card-header, .card-sq .card-footer{
@@ -239,26 +268,46 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	max-width:1140px;
 }
 .img-style{
-	border-radius:0px 0px 0px 0px;
+	width:275px;
 }
-.h3-style{
-	font-size:15px;
-	font-family:Vollkorn;
-}
-.container-div-style{
-	height:63px;
-}
-.h1-style{
-	font-family:Vollkorn;
-}
-.h2-style{
-	font-size:30px;
-}
-.h3-bloc-1-style{
-	font-size:20px;
+.img-4-style{
+	width:300px;
 }
 .p-style{
-	font-size:20px;
+	font-size:16px;
+	font-family:"PT Serif";
+}
+.p-bloc-1-style{
+	font-size:15px;
+	font-family:"PT Serif";
+}
+.p-19-style{
+	font-size:15px;
+	font-family:"PT Serif Caption";
+}
+.p-20-style{
+	font-size:15px;
+	font-family:"PT Serif Caption";
+}
+.p-1-style{
+	font-family:"PT Serif Caption";
+}
+.p-2-style{
+	font-family:"PT Serif Caption";
+}
+.p-3-style{
+	font-family:"PT Serif";
+}
+.p-4-style{
+	font-family:"PT Serif";
+	font-size:16px;
+}
+.p-5-style{
+	font-family:"PT Serif";
+	font-size:16px;
+}
+.h2-style{
+	font-family:"PT Serif Caption";
 }
 
 /* = Colour
@@ -268,6 +317,12 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 .bgc-black{
 	background-color:#000000;
+}
+
+/* Text colour styles */
+
+.tc-white{
+	color:#FFFFFF!important;
 }
 
 
@@ -334,16 +389,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	   height: 320px;
     }
 }
-@media (max-width: 767px){
-	.text-right{
-	}
-	.text-left{
-	}
-	.text-center{
-	}
-	
-}
-
 @media (max-width: 575px){
 	.footer-link{
 		text-align:center;
