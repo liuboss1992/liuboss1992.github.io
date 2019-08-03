@@ -221,6 +221,8 @@ button{
 }
 
 
+/* = Cards
+-------------------------------------------------------------- */
 .card-sq, .card-sq .card-header, .card-sq .card-footer{
 	border-radius:0;
 }
@@ -341,6 +343,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .tc-white{
 	color:#FFFFFF!important;
 }
+
+/* Bloc image backgrounds */
 
 
 
