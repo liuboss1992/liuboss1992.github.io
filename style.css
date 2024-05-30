@@ -14,8 +14,12 @@ body{
     -moz-osx-font-smoothing: grayscale;
 }
 .page-container{overflow: hidden;} /* Prevents unwanted scroll space when scroll FX used. */
-a,button{transition: background .3s ease-in-out;outline: none!important;} /* Prevent ugly blue glow on chrome and safari */
+a,button{transition: background .3s ease-in-out;outline: none!important;} /* Prevent blue selection glow on Chrome and Safari */
 a:hover{text-decoration: none; cursor:pointer;}
+.scroll-fx-lock-init{position:fixed!important;top: 0;bottom: 0;left: :0;right: 0;z-index:99999;} /* ScrollFX Lock */
+.blocs-grid-container{display: grid!important;grid-template-columns: 1fr 1fr;grid-template-rows: auto auto;column-gap: 1.5rem;row-gap: 1.5rem;} /* CSS Grid */
+nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downdown Menu Link Color in Navigation */
+[data-bs-theme="dark"] nav .dropdown-menu .nav-link{color:var(--bs-dropdown-link-color)!important;} /* Maintain Downdown Menu Link Color in Navigation in Darkmode */
 
 
 /* Preloader */
@@ -138,25 +142,67 @@ a:hover{text-decoration: none; cursor:pointer;}
 /* = NavBar
 -------------------------------------------------------------- */
 
-.hero .hero-nav{
-	padding-left:inherit;
-	padding-right:inherit;
+/* Navbar Icon */
+.svg-menu-icon{
+	fill: none;
+	stroke: rgba(0,0,0,0.5);
+	stroke-width: 2px;
+	fill-rule: evenodd;
 }
-/* Handle Multi Level Navigation */.navbar-light .navbar-nav .nav-link {
-	color: rgb(64, 64, 64);
+.navbar-dark .svg-menu-icon{
+	stroke: rgba(255,255,255,0.5);
 }
-.btco-menu li > a {
-	padding: 10px 15px;
-	color: #000;
+.menu-icon-thin-bars{
+	stroke-width: 1px;
 }
-.btco-menu .active a:focus,.btco-menu li a:focus ,.navbar > .show > a:focus{
-	background: transparent;
-	outline: 0;
+.menu-icon-thick-bars{
+	stroke-width: 5px;
 }
-.dropdown-menu .show > .dropdown-toggle::after{
-	transform: rotate(-90deg);
+.menu-icon-rounded-bars{
+	stroke-width: 3px;
+	stroke-linecap: round;
 }
-
+.menu-icon-filled{
+	fill: rgba(0,0,0,0.5);
+	stroke-width: 0px;
+}
+.navbar-dark .menu-icon-filled{
+	fill: rgba(255,255,255,0.5);
+}
+.navbar-toggler-icon{
+	background: none!important;
+	pointer-events: none;
+	width: 33px;
+	height: 33px;
+}
+/* Handle Multi Level Navigation */
+.dropdown-menu .dropdown-menu{
+	border:none}
+@media (min-width:576px){
+	
+.navbar-expand-sm .dropdown-menu .dropdown-menu{
+	border:1px solid rgba(0,0,0,.15);
+	position:absolute;
+	left:100%;
+	top:-7px}.navbar-expand-sm .dropdown-menu .submenu-left{
+	right:100%;
+	left:auto}}@media (min-width:768px){
+	.navbar-expand-md .dropdown-menu .dropdown-menu{
+	border:1px solid rgba(0,0,0,.15);
+	border:1px solid rgba(0,0,0,.15);
+	position:absolute;
+	left:100%;
+	top:-7px}.navbar-expand-md .dropdown-menu .submenu-left{
+	right:100%;
+	left:auto}}@media (min-width:992px){
+	.navbar-expand-lg .dropdown-menu .dropdown-menu{
+	border:1px solid rgba(0,0,0,.15);
+	position:absolute;
+	left:100%;
+	top:-7px}.navbar-expand-lg .dropdown-menu .submenu-left{
+	right:100%;
+	left:auto}
+}
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
@@ -225,8 +271,6 @@ button{
 }
 
 
-/* = Cards
--------------------------------------------------------------- */
 .card-sq, .card-sq .card-header, .card-sq .card-footer{
 	border-radius:0;
 }
@@ -256,9 +300,11 @@ button{
 	opacity:0;
 	z-index:999;
 	transition: all .3s ease-in-out;
+	pointer-events:none;
 }
 .showScrollTop{
 	opacity: 1;
+	pointer-events:all;
 }
 .scroll-to-top-btn-icon{
 	fill: none;
@@ -291,16 +337,12 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-size:15px;
 	font-family:"PT Serif";
 }
-.p-19-style{
-	font-size:15px;
-	font-family:"PT Serif Caption";
-}
 .p-20-style{
 	font-size:15px;
 	font-family:"PT Serif Caption";
 }
 .p-1-style{
-	font-family:"PT Serif Caption";
+	font-family:"PT Serif";
 }
 .p-2-style{
 	font-family:"PT Serif Caption";
@@ -333,17 +375,43 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:"PT Serif";
 	font-size:18px;
 }
-.h3-bloc-6-style{
-	font-family:"PT Serif Caption";
+.navbar-logo{
+	text-transform:none;
+	text-decoration:none;
+	font-size:20px;
+}
+.h3- -教育及工作经历-style{
+	font-family:"Ubuntu-Regular";
+}
+.link-style{
+	font-weight:bold;
 }
 
 /* = Colour
 -------------------------------------------------------------- */
 
+/* Swatch Variables */
+:root{
+	
+	--swatch-var-2869:rgba(0,0,0,1.0);
+	
+	--swatch-var-2941:rgba(255,255,255,1.0);
+	
+	--swatch-var-4715:#000000;
+	
+}
+
+
 /* Background colour styles */
 
-.bgc-black{
-	background-color:#000000;
+.bgc-2869{
+	background-color:var(--swatch-var-2869);
+}
+
+/* Text colour styles */
+
+.tc-2941{
+	color:var(--swatch-var-2941)!important;
 }
 
 /* Bloc image backgrounds */
@@ -429,9 +497,23 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	   height: 320px;
     }
 }
+
+@media (max-width: 991px){
+	.mt-md-0{
+	}
+	.mt-md-4{
+	}
+	
+}
+
 @media (max-width: 575px){
 	.footer-link{
 		text-align:center;
+	}
+	.navbar-logo{
+		font-size:18px;
+	}
+	.mt-1{
 	}
 	
 }
