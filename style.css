@@ -28,19 +28,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 .preloader-complete{animation-delay:0.1s;}
 @keyframes preloader-fade {0% {opacity: 1;visibility: visible;}100% {opacity: 0;visibility: hidden;}}
 
-/* = Web Fonts
--------------------------------------------------------------- */
-
-@font-face {
-	font-family:'PTSerif-Regular';
-	src: url('./fonts/PTSerif-Regular/pt-serif.woff2');
-	src: url('./fonts/PTSerif-Regular/pt-serif.woff2') format('woff2'),
-	url('./fonts/PTSerif-Regular/pt-serif.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
 /* = Blocs
 -------------------------------------------------------------- */
 
@@ -350,13 +337,13 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:"PT Serif Caption";
 }
 .p-1-style{
-	font-family:"PT Serif";
+	font-family:"PT Serif Caption";
 }
 .p-2-style{
-	font-family:"PTSerif-Regular";
+	font-family:"PT Serif Caption";
 }
 .p-3-style{
-	font-family:"PT Serif";
+	font-family:"PT Serif Caption";
 }
 .p-4-style{
 	font-family:"PT Serif";
