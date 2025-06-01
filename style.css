@@ -307,15 +307,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .p-style{
 	font-size:16px;
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 }
 .p-bloc-1-style{
 	font-size:15px;
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 }
 .p-20-style{
 	font-size:15px;
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 }
 .p-1-style{
 	font-family:"Noto Serif SC";
@@ -324,14 +324,14 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:"Noto Serif SC";
 }
 .p-3-style{
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 }
 .p-4-style{
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 	font-size:16px;
 }
 .p-5-style{
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 	font-size:16px;
 }
 .h2-style{
@@ -362,6 +362,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .link-style{
 	font-weight:bold;
 }
+.p-bloc-4-style{
+	font-family:"Noto Serif SC";
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -375,19 +378,30 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	
 	--swatch-var-4715:#000000;
 	
+	--swatch-var-2011:#FF2600;
+	
 }
 
 
 /* Background colour styles */
 
-.bgc-2869{
-	background-color:var(--swatch-var-2869);
+.bgc-4715{
+	background-color:var(--swatch-var-4715);
 }
 
 /* Text colour styles */
 
 .tc-2941{
 	color:var(--swatch-var-2941)!important;
+}
+
+/* Link colour styles */
+
+.ltc-2011{
+	color:var(--swatch-var-2011)!important;
+}
+.ltc-2011:hover{
+	color:#CC0000!important;
 }
 
 /* Bloc image backgrounds */
