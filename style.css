@@ -209,25 +209,9 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 .mg-clear{
 	margin:0;
 }
-.mg-sm{
-	margin-top:10px;
-	margin-bottom:5px;
-}
 .mg-md{
 	margin-top:10px;
 	margin-bottom:20px;
-}
-img.mg-sm,img.mg-md,img.mg-lg{
-	margin-top: 0;
-}
-img.mg-sm{
-	margin-bottom:10px;
-}
-img.mg-md{
-	margin-bottom:30px;
-}
-img.mg-lg{
-	margin-bottom:50px;
 }
 
 /* = Buttons
@@ -313,7 +297,7 @@ button{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 }
 .container{
 	max-width:1140px;
@@ -321,40 +305,37 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .img-style{
 	width:275px;
 }
-.img-4-style{
-	width:300px;
-}
 .p-style{
 	font-size:16px;
-	font-family:"PT Serif";
+	font-family:"PT Serif Caption";
 }
 .p-bloc-1-style{
 	font-size:15px;
-	font-family:"PT Serif";
+	font-family:"PT Serif Caption";
 }
 .p-20-style{
 	font-size:15px;
 	font-family:"PT Serif Caption";
 }
 .p-1-style{
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 }
 .p-2-style{
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 }
 .p-3-style{
 	font-family:"PT Serif Caption";
 }
 .p-4-style{
-	font-family:"PT Serif";
+	font-family:"PT Serif Caption";
 	font-size:16px;
 }
 .p-5-style{
-	font-family:"PT Serif";
+	font-family:"PT Serif Caption";
 	font-size:16px;
 }
 .h2-style{
-	font-family:"PT Serif Caption";
+	font-family:"Noto Serif SC";
 }
 .h3-style{
 	font-family:"PT Serif Caption";
@@ -388,7 +369,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 /* Swatch Variables */
 :root{
 	
-	--swatch-var-2869:rgba(0,0,0,1.0);
+	--swatch-var-2869:#0432FF;
 	
 	--swatch-var-2941:rgba(255,255,255,1.0);
 	
